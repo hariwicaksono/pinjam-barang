@@ -1,0 +1,50 @@
+
+/**** structural styling ***/
+nav {
+	margin-top:0px; 
+	margin-bottom:0px;
+	color: #333;
+	background:#fff;
+	border-bottom:5px solid #444;
+	}
+i 	{
+	color:#333;
+}
+.navbar{
+	border-bottom: 5px solid #333;
+	color:#fff;
+	}
+
+.navbar-header{
+	color:#fff;
+	}
+	
+ul li a{
+	color: #333;
+	}
+
+ul li a:hover{
+	color: #333;
+	}
+
+.divider{
+	height:1px;
+	width:100%;
+	border-bottom:#e2e2e2 1px solid;
+	margin:25px 0 25px 0;
+}
+
+
+/***** Font styling ****/
+
+html {
+	font-size:62.5%;
+}
+
+body {
+	font-size:1.0em;
+}
+
+body  p {font-size:1.2em;}
+
+body .navbar{font-size:1.2em;}

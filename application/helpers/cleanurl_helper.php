@@ -1,0 +1,89 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+if ( ! function_exists('set_linkurl')){
+
+  function set_linkurl($id, $jdl){
+    //buat array untuk memasukan beberapa karakter
+    $char = array ('{','}',')','(','|','`','~','!','@','%','$','^','&','*','=','?','+','-','/','\\',',','.','#',':',';','\'','"','[',']');
+    //ubah huruf menjadi kecil
+    //rubah struktur string pada $char menjadi kosong
+    $del_char = strtolower(str_replace($char,"",$jdl));
+    //ubah huruf menjadi kecil
+    //rubah struktur string yang kosong dengan memberi karakter strip (-)
+    $add_strip = strtolower(str_replace(' ', '-', $del_char));
+    $clean_url = $id.'/'.$add_strip;
+	return $clean_url;
+  }
+  function set_linkurl1($id, $jdl){
+    //buat array untuk memasukan beberapa karakter
+    $char = array ('{','}',')','(','|','`','~','!','@','%','$','^','&','*','=','?','+','-','/','\\',',','.','#',':',';','\'','"','[',']');
+    //ubah huruf menjadi kecil
+    //rubah struktur string pada $char menjadi kosong
+    $del_char = strtolower(str_replace($char,"",$jdl));
+    //ubah huruf menjadi kecil
+    //rubah struktur string yang kosong dengan memberi karakter strip (-)
+    $add_strip = strtolower(str_replace(' ', '-', $del_char));
+    $clean_url = $id.'-'.$add_strip;
+  return $clean_url;
+  }
+  function set_linkseo($jdl){
+    //buat array untuk memasukan beberapa karakter
+    $char = array ('{','}',')','(','|','`','~','!','@','%','$','^','&','*','=','?','+','-','/','\\',',','#',':',';','\'','"','[',']');
+    //ubah huruf menjadi kecil
+    //ubah struktur string pada $char menjadi kosong
+    $del_char = strtolower(str_replace($char,"",$jdl));
+    //ubah huruf menjadi kecil
+    //ubah struktur string yang kosong dengan memberi karakter strip (-)
+    $clean_url = strtolower(str_replace(' ', '-', $del_char));
+  return $clean_url;
+  }
+  function set_cleanpost($jdl){
+    //buat array untuk memasukan beberapa karakter
+    $char = array ('{','}',')','(','|','`','~','!','@','%','$','^','&','*','=','?','+','-','/','\\',',','#',':',';','\'','"','[',']','<','>');
+    //ubah huruf menjadi kecil
+    //ubah struktur string pada $char menjadi kosong
+    $del_char = strtolower(str_replace($char,"",$jdl));
+    //ubah huruf menjadi kecil
+    //ubah struktur string yang kosong dengan memberi karakter strip (-)
+    $clean_url = strtolower(str_replace(' ', ' ', $del_char));
+  return $clean_url;
+  }
+  function set_angka($angka){
+    //buat array untuk memasukan beberapa karakter
+    $q = array ('Rp.','.',' ');
+    $fix_angka = str_replace($q, "", $angka); // Ganti beberapa karakter di $q dengan tanpa spasi
+  return $fix_angka;
+  }
+
+  function set_linkjudul($jdl){
+    //buat array untuk memasukan beberapa karakter
+    $char = array ('{','}',')','(','|','`','~','!','@','%','$','^','&','*','=','?','+','-','/','\\',',','.','#',':',';','\'','"','[',']');
+    //ubah huruf menjadi kecil
+    //rubah struktur string pada $char menjadi kosong
+    $del_char = strtolower(str_replace($char,"",$jdl));
+    //ubah huruf menjadi kecil
+    //rubah struktur string yang kosong dengan memberi karakter strip (-)
+    $add_strip = strtolower(str_replace(' ', '-', $del_char));
+    $clean_url = $add_strip;
+    return $clean_url;
+  }
+
+  function set_cleanurl($nama_kategori, $id){
+
+    $clean_url = $nama_kategori.'/'.$id;
+    return $clean_url;
+  }
+
+  function set_linkurlgambar($jdl){
+    //buat array untuk memasukan beberapa karakter
+    $char = array ('{','}',')','(','|','`','~','!','@','%','$','^','&','*','=','?','+','/','\\',',','#',':',';','\'','"','[',']');
+    //ubah huruf menjadi kecil
+    //rubah struktur string pada $char menjadi kosong
+    $del_char = str_replace($char,"",$jdl);
+    //ubah huruf menjadi kecil
+    //rubah struktur string yang kosong dengan memberi karakter strip (-)
+    $add_underscore = str_replace(' ', '_', $del_char);
+    return $add_underscore;
+  }
+	
+}
+?>
