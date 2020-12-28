@@ -7,31 +7,19 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta name="description" content="<?php if(isset($desc)) echo $desc; ?>"/>
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/bower_components/css/bootstrap.min.css');?>">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/bower_components/font-awesome/css/font-awesome.min.css');?>">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/bower_components/Ionicons/css/ionicons.min.css');?>">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css');?>">
-  <!-- bootstrap datepicker -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css');?>">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/bower_components/select2/dist/css/select2.min.css');?>">
-  <!-- Morris charts -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/bower_components/morris.js/morris.css');?>">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/dist/css/AdminLTE.min.css');?>">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/admin/dist/css/skins/_all-skins.min.css');?>">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url('assets/adminlte/plugins/fontawesome-free/css/all.min.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/adminlte/plugins/select2/css/select2.min.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/adminlte/dist/css/adminlte.min.css');?>">
+<!-- overlayScrollbars -->
+<link rel="stylesheet" href="<?php echo base_url('assets/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css');?>">
+  <!-- summernote -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/adminlte/plugins/summernote/summernote-bs4.css') ?>">
   <!-- Toast -->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/admin/bower_components/toast/jquery.toast.min.css');?>"/>
-
-  <!-- Google Font -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminlte/plugins/toastr/toastr.min.css');?>"/>
   <style type="text/css">
   /*th{
     background: #3c8dbc;;
@@ -205,33 +193,36 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-<!-- jQuery 3 -->
-<script src="<?php echo base_url('assets/admin/bower_components/jquery/dist/jquery.min.js');?>"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="<?php echo base_url('assets/admin/bower_components/bootstrap/dist/js/bootstrap.min.js');?>"></script>
-<script src="<?php echo base_url('assets/bootstrap/js/jquery.bootstrap.min.js');?>"></script>
-<!-- DataTables -->
-<script src="<?php echo base_url('assets/admin/bower_components/datatables.net/js/jquery.dataTables.min.js');?>"></script>
-<script src="<?php echo base_url('assets/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js');?>"></script>
-<!-- SlimScroll -->
-<script src="<?php echo base_url('assets/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js');?>"></script>
-<!-- FastClick -->
-<script src="<?php echo base_url('assets/admin/bower_components/fastclick/lib/fastclick.js');?>"></script>
+
+<!-- jQuery -->
+<script src="<?php echo base_url('assets/adminlte/plugins/jquery/jquery.min.js');?>"></script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo base_url('assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
 <!-- AdminLTE App -->
-<script src="<?php echo base_url('assets/admin/dist/js/adminlte.min.js');?>"></script>
+<script src="<?php echo base_url('assets/adminlte/dist/js/adminlte.min.js');?>"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url('assets/adminlte/plugins/datatables/jquery.dataTables.min.js');?>"></script>
+<script src="<?php echo base_url('assets/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js');?>"></script>
+<!-- SlimScroll -->
+<script src="<?php echo base_url('assets/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js');?>"></script>
+<!-- FastClick -->
+<script src="<?php echo base_url('assets/adminlte/plugins/fastclick/fastclick.js');?>"></script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('assets/admin/dist/js/demo.js');?>"></script>
-<!-- Morris.js charts -->
-<script src="<?php echo base_url('assets/admin/bower_components/raphael/raphael.min.js');?>"></script>
-<script src="<?php echo base_url('assets/admin/bower_components/morris.js/morris.min.js');?>"></script>
-<!-- CK Editor -->
-<script src="<?php echo base_url('assets/admin/bower_components/ckeditor/ckeditor.js');?>"></script>
+<!-- ChartJS -->
+<script src="<?php echo base_url('assets/bower_components/Chart.js/Chart.js') ?>"></script>
+  <!-- Moment -->
+  <script src="<?php echo base_url('assets/adminlte/plugins/moment/moment.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/adminlte/plugins/moment/locale/id.js') ?>"></script>
+  <!-- Summernote -->
+  <script src="<?php echo base_url('assets/adminlte/plugins/summernote/summernote-bs4.min.js') ?>"></script>
 <!-- bootstrap datepicker -->
 <script src="<?php echo base_url('assets/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js');?>"></script>
 <!-- Select2 -->
-<script src="<?php echo base_url('assets/admin/bower_components/select2/dist/js/select2.full.min.js');?>"></script>
+<script src="<?php echo base_url('assets/adminlte/plugins/select2/js/select2.full.min.js');?>"></script>
 <!-- Toast -->
-<script type="text/javascript" src="<?php echo base_url('assets/admin/bower_components/toast/jquery.toast.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/adminlte/plugins/toastr/toastr.min.js');?>"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     $(function(){

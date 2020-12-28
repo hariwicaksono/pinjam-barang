@@ -16,17 +16,13 @@
             <li><a href="<?php echo base_url('user'); ?>"><i class="fa fa-circle-o"></i> <span>List User</span></a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
+        <li>
+          <a href="<?php echo base_url('barang'); ?>">
             <i class="fa fa-briefcase"></i>
             <span>Data Barang</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            
           </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('barang'); ?>"><i class="fa fa-circle-o"></i> <span>List Barang</span></a></li>
-          </ul>
+          
         </li>
         <li class="treeview">
           <a href="#">

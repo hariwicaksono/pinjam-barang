@@ -48,7 +48,7 @@ class Login extends CI_Controller {
 			$a = set_cleanpost($xss);  
 	      if($a)
 	      {
-	        $data['error'] = '<div class="alert alert-danger" style="margin-top:3px;"><div class="header"><b><i class="fa fa-warning"></i> MAAF !!! </b> Link yang Anda cari tidak tersedia.</div></div>'; 
+	        $data['error'] = '<div class="alert alert-warning" style="margin-top:3px;font-size:.875rem"><i class="fas fa-exclamation-circle"></i> Error 404! Link yang Anda cari tidak ada.</div>'; 
 	        $this->load->view('v_login', $data);
 	      } 
 		}
@@ -63,7 +63,7 @@ class Login extends CI_Controller {
 	      $u = $this->m_user->cekdb();  
 	      if($u == FALSE)
 	      {
-	        $data['error'] = '<div class="alert alert-danger" style="margin-top:3px;"><div class="header"><b><i class="fa fa-warning"></i> ERROR</b> Username atau Password salah.</div></div>'; 
+	        $data['error'] = '<div class="alert alert-warning" style="margin-top:3px;font-size:.875rem"><i class="fas fa-exclamation-circle"></i> Username atau Password salah.</div>'; 
 	        $this->load->view('v_login', $data);
 	      } else {
 	        // if the username and password is a match
